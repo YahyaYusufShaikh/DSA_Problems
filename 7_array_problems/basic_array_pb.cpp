@@ -20,10 +20,25 @@ int secondLargest(vector<int> &arr, int n){
     return slargest;
 }
 
+//second smallest
+int secondSmallest(vector <int> &arr, int n){
+    int smallest = arr[0];
+    for(int i = 0; i<n; i++){
+        if(arr[i]<smallest) smallest = arr[i];
+    }
+    int ssmallest = INT_MAX;
+    for(int i = 0; i<n; i++){
+        if(arr[i]<ssmallest && arr[i]>smallest) ssmallest = arr[i];
+    }
+    return ssmallest;
+}
+
 int main(){
-    vector<int> arr = {3, 4, 7, 12, 9};
+    vector<int> arr = {5, 4, 7,2,3, 12, 9};
     cout<<largetst(arr, arr.size());
     cout<<endl;
     cout<<secondLargest(arr, arr.size());
+    cout<<endl;
+    cout<<secondSmallest(arr, arr.size());
     return 0;
 }
