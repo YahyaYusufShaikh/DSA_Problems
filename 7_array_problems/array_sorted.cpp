@@ -1,7 +1,20 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-//array sorted or not
+//array sorted or not with rotation
+    bool check(vector<int>& nums) {
+        int count = 0;
+        int n = nums.size();
+
+        for(int i = 0; i < n; i++) {
+            if(nums[i] > nums[(i + 1) % n]) {
+                count++;
+            }
+        }
+
+        return count <= 1;
+    }
+
 bool isSorted(vector<int> v, int n){
     for(int i = 1; i<n; i++){
         if(v[i]>v[i-1]){
@@ -21,5 +34,9 @@ int main(){
 
     cout<<isSorted(arr, arr.size())<<endl;
     cout<<isSorted(arr1, arr1.size())<<endl;
+    cout<<arr.size();
+    cout<<arr1[(4+1)%4];
+    cout<<endl;
+    cout<<check(arr);
     return 0;
 }
