@@ -14,7 +14,7 @@ using namespace std;
     }
 
 int main(){
-    vector<int> v = {1, 2,2,2,3,3,4,5,5,6,7};
+    vector<int> v = {1,2,2,2,3,3,4,5,5,6,7};
     cout<<removeDuplicates(v);
     return 0;
 }
