@@ -9,6 +9,8 @@ int linearSearch(vector<int> &arr, int n, int key){
 }
 
 int main(){
+    vector<int> arr = {1,2,4,5,6,7};
+    cout<<linearSearch(arr, arr.size(), 4);
 
     return 0;
 }
