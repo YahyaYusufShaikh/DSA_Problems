@@ -22,10 +22,11 @@ int main(){
     
     vector<int> arr = {1,0,2,3,2,0,0,4,5,0,1};
     moveZeros(arr, arr.size());
-
+    cout<<"[";
     for(int i = 0; i<arr.size(); i++){
-        cout<<arr[i]<<" ";
+        cout<<" "<<arr[i]<<" ";
     }
+    cout<<"]";
 
     return 0;
 }
