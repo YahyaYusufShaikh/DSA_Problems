@@ -2,7 +2,7 @@
 using namespace std;
 
 
-vector<int> Union(vector<> arr1, vector<> arr2){
+vector<int> Union(vector<int> arr1, vector<int> arr2){
     int n1 = arr1.size();
     int n2 = arr2.size();
 
@@ -23,8 +23,9 @@ int main(){
     vector<int> a = {1,2,4,5,7,9};
     vector<int> b = {2,3,4,7,10,11};
 
-    Union(a, b);
+    vector <int> v = Union(a, b);
 
+    cout<<v.size()<<endl;
 
     return 0;
 }
