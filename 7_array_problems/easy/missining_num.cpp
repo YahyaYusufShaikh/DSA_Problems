@@ -15,5 +15,16 @@ int main()
             cout<<i<<" ";            
         }
     }
+
+//1 Better Solution SUM:
+
+    int n = 5;
+    int num[5] = {1,2,4,5};
+    int sum = n * (n+1) / 2;
+    s2 = 0;
+    for(int i = 0; i<n; i++){
+        s2 += num[i];
+    }
+    cout<<sum - s2;
     return 0;
 }
