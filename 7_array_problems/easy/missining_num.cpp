@@ -18,10 +18,9 @@ int main()
 
 //1 Better Solution SUM:
 
-    int n = 5;
-    int num[5] = {1,2,4,5};
-    int sum = n * (n+1) / 2;
-    s2 = 0;
+    int n1 = 5;
+    int sum = n1 * (n1+1) / 2;
+    int s2 = 0;
     for(int i = 0; i<n; i++){
         s2 += num[i];
     }
