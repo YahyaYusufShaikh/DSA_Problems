@@ -1,4 +1,4 @@
-#include <stdc/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 int getSingle(vector<int> arr){
@@ -12,6 +12,6 @@ int getSingle(vector<int> arr){
 int main(){
 
     vector<int> arr = {1,1,2,2,3,4,4};
-
+    cout<<getSingle(arr);
     return 0;
 }
