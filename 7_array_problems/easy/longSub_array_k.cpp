@@ -7,10 +7,11 @@ int longestSubArrayWithSumK(vector<int> a, long long K){
     long long sum = a[0];
     while(right < n){
         while(left <= right && sum > K){
-            sum -= a[left++];
+            sum -= a[left];
+            left++;
         }
         if(sum == K){
-            maxlen = max(maxlen, right = left + 1);
+            maxlen = max(maxlen, right - left + 1);
         }
         right++;
         if(right < n) sum += a[right];
@@ -23,5 +24,6 @@ int main(){
 
     vector<int> arr {1,2,0,0,3,3,1,1,1,1,4,5,3,6,4,2};
 
+    cout<<longestSubArrayWithSumK(arr, 6);
     return 0;
 }
