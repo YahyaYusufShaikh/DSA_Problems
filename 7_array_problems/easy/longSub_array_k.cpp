@@ -3,7 +3,19 @@ using namespace std;
 
 //better and optimal solution
 int longestSubArrayWithSumK(vector<int> a, long long K){
-    
+    int left = 0, right = 0, maxlen = 0, n = a.size();
+    long long sum = a[0];
+    while(right < n){
+        while(left <= right && sum > K){
+            sum -= a[left++];
+        }
+        if(sum == K){
+            maxlen = max(maxlen, right = left + 1);
+        }
+        right++;
+        if(right < n) sum += a[right];
+    }
+    return maxlen;
 }
 
 
