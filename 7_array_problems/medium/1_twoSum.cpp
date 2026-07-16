@@ -15,6 +15,11 @@ string twoSum(vector<int>& nums, int target){
     }
 }
 
+//optimal solutions:
+String twoSumOp(vector<int>& nums, int target){
+    
+}
+
 int main(){
     vector<int> v = {4, 1, 2, 3, 1};
 
