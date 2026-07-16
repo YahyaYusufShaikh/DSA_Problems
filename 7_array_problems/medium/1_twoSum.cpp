@@ -22,8 +22,13 @@ String twoSumOp(vector<int>& nums, int target){
     sort(nums.begin(), nums.end());
     while(left < right){
         int sum  = nums[left] + nums[right];
-
+        if(sum == target){
+            return "Yes";
+        }
+        else if(sum < target) left++;
+        else right--;
     }
+    return "No";
 }
 
 int main(){
