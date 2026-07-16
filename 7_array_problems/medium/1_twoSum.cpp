@@ -35,7 +35,8 @@ int main(){
     vector<int> v = {4, 1, 2, 3, 1};
 
     cout<<twoSum(v, 5);
-
+    cout<<endl;
+    cout<<twoSumOp(v, 5);
     
     
     return 0;
