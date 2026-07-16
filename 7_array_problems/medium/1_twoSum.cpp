@@ -17,7 +17,13 @@ string twoSum(vector<int>& nums, int target){
 
 //optimal solutions:
 String twoSumOp(vector<int>& nums, int target){
-    
+    int left = 0, right = nums.size()-1;
+
+    sort(nums.begin(), nums.end());
+    while(left < right){
+        int sum  = nums[left] + nums[right];
+
+    }
 }
 
 int main(){
