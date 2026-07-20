@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-//better solutions
+//better solution
 void count012(vector<int>& nums) {
     int count0 = 0, count1 = 0, count2 = 0;
     for(int i = 0; i<nums.size(); i++){
