@@ -24,11 +24,11 @@ int longestSubArrayWithSumK(vector<int> a, long long K){
 int getLongestSubArray(vector<int> a, int K){
     map<long long, int> preSumMap;
     long long sum = 0;
-    int maxlen = 0;
+    int maxLen = 0;
     for(int i = 0; i<a.size(); i++){
         sum += a[i];
         if(sum == K){
-            maxlen = max(maxLen, i+1);
+            maxLen = max(maxLen, i+1);
         }
         long long rem = sum - K;
         if(preSumMap.find(rem) != preSumMap.end()){
@@ -37,14 +37,14 @@ int getLongestSubArray(vector<int> a, int K){
         }
         if(preSumMap.find(sum) == preSumMap.end()) preSumMap[sum] = i;
     }
-    return maxlen;
+    return maxLen;
 }
 
 int main(){
 
     vector<int> arr {1,2,0,0,3,3,1,1,1,1,4,5,3,6,4,2};
 
-    cout<<longestSubArrayWithSumK(arr, 6);
-    cout<<getLongestSubArray(arr, 6);
+    cout<<longestSubArrayWithSumK(arr, 6)<<endl;
+    cout<<getLongestSubArray(arr, 6)<<endl;
     return 0;
 }

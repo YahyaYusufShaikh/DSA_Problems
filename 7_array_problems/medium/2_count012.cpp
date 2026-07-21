@@ -26,6 +26,10 @@ void count012(vector<int>& nums) {
 =
 
 //optimal solution
+//Duction National Algorithm
+void duthNatAlgo(vector<int> &nums){}
+
+
 int main(){
 
     vector<int> num = {0,1,2,0,1,2,1,2,0,0,0,1};
