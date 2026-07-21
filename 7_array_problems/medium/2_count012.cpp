@@ -35,7 +35,7 @@ void duthNatAlgo(vector<int> &nums){
         }else if(nums[mid] == 1){
             mid++;
         }else{
-            swap(nums[mid], nums[high]) high--;
+            swap(nums[mid], nums[high]), high--;
         }
     }
 }
