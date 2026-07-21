@@ -23,17 +23,19 @@ void count012(vector<int>& nums) {
     }
     cout<<count0<<" "<<count1<<" "<<count2<<endl;
 }
-=
+
 
 //optimal solution
 //Duction National Algorithm
-void duthNatAlgo(vector<int> &nums){}
+void duthNatAlgo(vector<int> &nums){
+
+}
 
 
 int main(){
 
     vector<int> num = {0,1,2,0,1,2,1,2,0,0,0,1};
-    count012(num);
+    // count012(num);
     for(int i = 0; i<num.size(); i++){
         cout<<num[i]<<" ";
     }
