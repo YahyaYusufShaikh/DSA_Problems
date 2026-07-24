@@ -14,6 +14,7 @@ int majority(vector<int>v){
     return -1;
 }
 
+//moore's voting algorithm
 int main(){
 
     vector<int>v = {2,2,1,3,1,1,3,1,1};
