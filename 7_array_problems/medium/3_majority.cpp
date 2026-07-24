@@ -8,7 +8,7 @@ int majority(vector<int>v){
     }
     for(auto it: mpp){
         if(it.second > v.size()/2){
-            return it.first;
+            cout<< it.first <<" "<<it.second<<endl;
         }
     }
     return -1;
@@ -17,7 +17,7 @@ int majority(vector<int>v){
 int main(){
 
     vector<int>v = {2,2,1,3,1,1,3,1,1};
-
+    cout<<majority(v);
 
     return 0;
 }
