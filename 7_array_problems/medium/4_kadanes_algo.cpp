@@ -3,7 +3,7 @@ using namespace std;
 
 long long maxSubArray(vector<int> &nums){
     long long sum = 0, maxi = LONG_MIN;
-    for(i = 0; i<nums.size(); i++){
+    for(int i = 0; i<nums.size(); i++){
         sum += nums[i];
         if(sum > maxi) maxi = sum;
         if(sum < 0) sum = 0;
@@ -11,9 +11,11 @@ long long maxSubArray(vector<int> &nums){
     return maxi;
 }
 
+
 int main(){
     
-    vector<int>v = {2,2,1,3,1,1,3,1,1};
+    vector<int>v = {-2,1,-3,4,-1, -2, 1, 5, -3};
+    cout<<maxSubArray(v);
 
 
     cout<<"Started \n\n";
