@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 long long maxSubArray(vector<int> &nums){
     long long sum = 0, maxi = LONG_MIN;
     int start, ansStart = -1, ansEnd = -1;
@@ -17,7 +16,6 @@ long long maxSubArray(vector<int> &nums){
             start = i+1;
         };
     }
-
         cout<<"Sub Array "<<endl;
         for(int j = ansStart; j<=ansEnd; j++){
             cout<<nums[j]<<" ";
@@ -25,7 +23,6 @@ long long maxSubArray(vector<int> &nums){
         cout<<endl;
     return maxi;
 }
-
 int main(){
     vector<int>v = {-2,1,-3,4,-1, -2, 1, 5, -3};
     cout<<maxSubArray(v);
