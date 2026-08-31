@@ -16,7 +16,6 @@ long long maxSubArray(vector<int> &nums){
             sum = 0;
             start = i+1;
         };
-
     }
 
         cout<<"Sub Array "<<endl;
@@ -27,9 +26,7 @@ long long maxSubArray(vector<int> &nums){
     return maxi;
 }
 
-
 int main(){
-    
     vector<int>v = {-2,1,-3,4,-1, -2, 1, 5, -3};
     cout<<maxSubArray(v);
     return 0;
