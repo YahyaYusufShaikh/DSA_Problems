@@ -19,10 +19,19 @@ using namespace std;
             }
             int index = neg.size()*2;
             for(int i = neg.size(); i < pos.size(); i++){
-                
+                nums[index] = pos[i];
+                index++;
             }
         }else{
-
+             for(int i = 0; i < pos.size(); i++){
+                nums[2*i] = pos[i];
+                nums[2*i+1] = neg[i];
+            }
+            int index = pos.size()*2;
+            for(int i = pos.size(); i < neg.size(); i++){
+                nums[index] = neg[i];
+                index++;
+            }
         }
     }
 
