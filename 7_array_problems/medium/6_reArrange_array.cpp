@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+
 using namespace std;
 
 
@@ -33,11 +34,33 @@ using namespace std;
                 index++;
             }
         }
+
+        return nums;
+    }
+
+    vector<int> rearrangeArray1(vector<int>& nums) {
+     int n = nums.size();
+     vector<int> ans(n, 0);
+     int posIndex = 0, negIndex = 1; 
+     for(int i = 0; i<n; i++){
+        if(nums[i]>0){
+            ans[posIndex] = nums[i];
+            posIndex +=2;
+        }else{
+            ans[negIndex] = nums[i];
+            negIndex += 2;
+        }
+     }
+        return ans;
     }
 
 
 int main(){
-
-
+ vector<int> v = {2, -1, -2, 3, 4, -4, -6};
+  v = rearrangeArray(v);
+    cout<<v.size()<<endl;
+    for (int i = 0; i < v.size(); i++) {
+        cout << v[i] << " ";
+    }
     return 0;
 }
