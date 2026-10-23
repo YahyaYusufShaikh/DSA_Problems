@@ -6,9 +6,9 @@ using namespace std;
 
 vector<vector<int>> Brotate(vector<vector<int>>& matrix){
     int n = matrix.size();
-    vector<vector<int>> ans;
-    for(int i = 0; i<matrix[0].size(); i++){
-        for(int j = 0; j<matrix[0].size(); j++){
+    vector<vector<int>> ans(n, vector<int>(n, 0));
+    for(int i = 0; i<matrix.size(); i++){
+        for(int j = 0; j<matrix.size(); j++){
             ans[j][n-1-i] = matrix[i][j];
         }
     }
@@ -17,7 +17,23 @@ vector<vector<int>> Brotate(vector<vector<int>>& matrix){
 
 int main(){
 
-    
+      vector<vector<int>> matrix = {
+        {1,  2,  3,  4,  5,  6},
+        {20, 21, 22, 23, 24, 7},
+        {19, 32, 33, 34, 25, 8},
+        {18, 31, 36, 35, 26, 9},
+        {17, 30, 29, 28, 27, 10},
+        {16, 15, 14, 13, 12, 11}
+    };
+
+    vector<vector<int>> ans = Brotate(matrix);
+      for (auto &r : ans) {
+        for (int x : r) {
+            cout << x << " ";
+        }
+        cout << endl;
+    }
+    cout<<"hello";
 
     return 0;
 }
