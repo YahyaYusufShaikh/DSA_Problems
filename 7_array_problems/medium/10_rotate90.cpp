@@ -15,6 +15,18 @@ vector<vector<int>> Brotate(vector<vector<int>>& matrix){
     return ans;
 } 
 
+//optimal solution
+void OptimalRotate(vector<vector<int>>&mat){
+    int n = mat.size();
+    for(int i = 0; i<n-1; i++){
+        for(int j = i+1; j<n; j++){
+            swap(mat[i][j] = mat[j][i]);
+        }
+    }
+
+
+}
+
 int main(){
 
       vector<vector<int>> matrix = {
