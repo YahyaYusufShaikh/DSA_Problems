@@ -20,10 +20,13 @@ void OptimalRotate(vector<vector<int>>&mat){
     int n = mat.size();
     for(int i = 0; i<n-1; i++){
         for(int j = i+1; j<n; j++){
-            swap(mat[i][j] = mat[j][i]);
+            swap(mat[i][j] , mat[j][i]);
         }
     }
 
+    for(int i =0; i<n; i++){
+        reverse(mat[i].begin(), mat[i].end());
+    }
 
 }
 
@@ -46,6 +49,16 @@ int main(){
         cout << endl;
     }
     cout<<"hello";
+    cout<<endl;
+    cout<<"Optimal solution"<<endl<<endl;
+
+    OptimalRotate(matrix);
+    for (auto &r : matrix) {
+        for (int x : r) {
+            cout << x << " ";
+        }
+        cout << endl;
+    }
 
     return 0;
 }
